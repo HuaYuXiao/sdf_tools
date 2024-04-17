@@ -1,3 +1,10 @@
 std_msgs/Header header
-uint8[] serialized_map
-bool is_compressed
+geometry_msgs/Transform origin_transform
+geometry_msgs/Vector3 dimensions
+float64 cell_size
+uint32 number_of_components
+bool components_valid
+bool convex_segments_valid
+bool initialized
+uint8[] OOB_value
+uint8[] data
