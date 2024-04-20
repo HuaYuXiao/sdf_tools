@@ -8,7 +8,7 @@
 #include <visualization_msgs/Marker.h>
 #include <arc_utilities/eigen_helpers.hpp>
 #include <arc_utilities/voxel_grid.hpp>
-#include <sdf_tools/SDF.h>
+#include "sdf_tools/SDF.h"
 
 namespace sdf_tools
 {

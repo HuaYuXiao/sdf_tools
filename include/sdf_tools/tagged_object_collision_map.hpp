@@ -7,8 +7,8 @@
 #include <arc_utilities/voxel_grid.hpp>
 #include <arc_utilities/arc_helpers.hpp>
 #include <arc_utilities/eigen_helpers.hpp>
-#include <sdf_tools/sdf.hpp>
-#include <sdf_tools/TaggedObjectCollisionMap.h>
+#include "sdf_tools/sdf.hpp"
+#include "sdf_tools/TaggedObjectCollisionMap.h"
 
 #ifndef TAGGED_OBJECT_COLLISION_MAP_HPP
 #define TAGGED_OBJECT_COLLISION_MAP_HPP

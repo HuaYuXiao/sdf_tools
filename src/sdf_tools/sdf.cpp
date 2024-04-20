@@ -9,10 +9,11 @@
 #include <unordered_map>
 #include <zlib.h>
 #include <ros/ros.h>
-#include <arc_utilities/eigen_helpers_conversions.hpp>
-#include <arc_utilities/zlib_helpers.hpp>
-#include <sdf_tools/sdf.hpp>
-#include <sdf_tools/SDF.h>
+#include "arc_utilities/eigen_helpers_conversions.hpp"
+#include "arc_utilities/zlib_helpers.hpp"
+#include "arc_utilities/voxel_grid.hpp"
+#include "sdf_tools/sdf.hpp"
+#include "sdf_tools/SDF.h"
 
 namespace sdf_tools
 {

@@ -5,8 +5,8 @@
 #include <visualization_msgs/Marker.h>
 #include <arc_utilities/arc_helpers.hpp>
 #include <arc_utilities/voxel_grid.hpp>
-#include <sdf_tools/sdf.hpp>
-#include <sdf_tools/CollisionMap.h>
+#include "sdf_tools/sdf.hpp"
+#include "sdf_tools/CollisionMap.h"
 
 #ifndef COLLISION_MAP_HPP
 #define COLLISION_MAP_HPP

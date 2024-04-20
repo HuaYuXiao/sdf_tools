@@ -9,7 +9,7 @@
 #include <visualization_msgs/Marker.h>
 #include <arc_utilities/voxel_grid.hpp>
 #include <arc_utilities/pretty_print.hpp>
-#include <sdf_tools/sdf.hpp>
+#include "sdf_tools/sdf.hpp"
 
 #ifndef SDF_GENERATION_HPP
 #define SDF_GENERATION_HPP

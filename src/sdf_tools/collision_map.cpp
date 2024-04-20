@@ -10,10 +10,11 @@
 #include <ros/ros.h>
 #include <list>
 #include <unordered_map>
-#include <arc_utilities/eigen_helpers_conversions.hpp>
-#include <arc_utilities/zlib_helpers.hpp>
-#include <sdf_tools/collision_map.hpp>
-#include <sdf_tools/CollisionMap.h>
+#include "arc_utilities/eigen_helpers_conversions.hpp"
+#include "arc_utilities/zlib_helpers.hpp"
+#include "arc_utilities/voxel_grid.hpp"
+#include "sdf_tools/collision_map.hpp"
+#include "sdf_tools/CollisionMap.h"
 
 namespace sdf_tools
 {

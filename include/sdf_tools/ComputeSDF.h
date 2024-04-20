@@ -8,8 +8,8 @@
 #include <ros/service_traits.h>
 
 
-#include <sdf_tools/ComputeSDFRequest.h>
-#include <sdf_tools/ComputeSDFResponse.h>
+#include "sdf_tools/ComputeSDFRequest.h"
+#include "sdf_tools/ComputeSDFResponse.h"
 
 
 namespace sdf_tools
