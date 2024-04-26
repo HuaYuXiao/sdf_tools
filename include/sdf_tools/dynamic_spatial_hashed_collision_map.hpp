@@ -3,8 +3,8 @@
 #include <string>
 #include <Eigen/Geometry>
 #include <visualization_msgs/Marker.h>
-#include <arc_utilities/voxel_grid.hpp>
-#include <arc_utilities/dynamic_spatial_hashed_voxel_grid.hpp>
+#include "arc_utilities/voxel_grid.hpp"
+#include "arc_utilities/dynamic_spatial_hashed_voxel_grid.hpp"
 #include "sdf_tools/collision_map.hpp"
 
 #ifndef DYNAMIC_SPATIAL_HASHED_COLLISION_MAP_HPP
