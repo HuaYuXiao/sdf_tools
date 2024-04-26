@@ -1,8 +1,8 @@
 #include <ros/ros.h>
+#include <time.h>
 #include "sdf_tools/SDF.h"
 #include "sdf_tools/sdf_builder.hpp"
-#include <arc_utilities/eigen_helpers_conversions.hpp>
-#include <time.h>
+#include "arc_utilities/eigen_helpers_conversions.hpp"
 
 visualization_msgs::Marker ExportCollisionMapForDisplay(VoxelGrid::VoxelGrid<uint8_t>& collision_map, std::string frame, float alpha)
 {
@@ -19,9 +19,9 @@ visualization_msgs::Marker ExportCollisionMapForDisplay(VoxelGrid::VoxelGrid<uin
     display_rep.frame_locked = false;
     const Eigen::Isometry3d base_transform = Eigen::Isometry3d::Identity();
     display_rep.pose = EigenHelpersConversions::EigenIsometry3dToGeometryPose(base_transform);
-    display_rep.scale.x = collision_map.GetCellSizes().x();
-    display_rep.scale.y = collision_map.GetCellSizes().y();
-    display_rep.scale.z = collision_map.GetCellSizes().z();
+    display_rep.scale.x = collision_map.GetCellSizes()[0];
+    display_rep.scale.y = collision_map.GetCellSizes()[1];
+    display_rep.scale.z = collision_map.GetCellSizes()[2];
     // Add all cells in collision
     for (int64_t x_index = 0; x_index < collision_map.GetNumXCells(); x_index++)
     {
@@ -34,11 +34,11 @@ visualization_msgs::Marker ExportCollisionMapForDisplay(VoxelGrid::VoxelGrid<uin
                 if (status == 1)
                 {
                     // Convert cell indices into a real-world location
-                    const Eigen::Vector4d location = collision_map.GridIndexToLocation(x_index, y_index, z_index);
+                    std::vector<double> location = collision_map.GridIndexToLocation(x_index, y_index, z_index);
                     geometry_msgs::Point new_point;
-                    new_point.x = location(0);
-                    new_point.y = location(1);
-                    new_point.z = location(2);
+                    new_point.x = location[0];
+                    new_point.y = location[1];
+                    new_point.z = location[2];
                     display_rep.points.push_back(new_point);
                     // Color it
                     std_msgs::ColorRGBA new_color;
